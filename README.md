@@ -22,7 +22,7 @@ No jogo, todos os personagens e todas as 5 dicas de cada um vem diretamente dos 
 ### Execução
 Para executar o projeto bastar clonar o repositório com o link abaixo:
 ```bash
-git clone https://github.com/gabriel-piva/quem-sabe-mais.git
+git clone https://github.com/gabriel-piva/quemSabeMais.git
 ```
 Em seguida, navegue até a pasta, instale as dependências com `npm install` e inicie o compilador TypeScript com `npm start`, que monitorará os arquivos _.ts_ para compilação automática. É necessário o [Node.js](https://nodejs.org/pt-br) instalado para executar esses comandos.
 
