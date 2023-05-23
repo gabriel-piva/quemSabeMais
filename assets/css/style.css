@@ -1,0 +1,469 @@
+/*--------------------------------------------------------------------------*/
+
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+/*--------------------------------------------------------------------------*/
+
+/* Color Pallete */
+
+:root {
+    --main: #0B8F82;
+    --transl: #0b8f823b;
+    --dark: #05574F;
+    --rev: #10594C; 
+    --acc: #c93d3dad;
+    --white: #F1F1F1;
+    --gray1: #262626;
+    --gray2: #201E1E;
+    --gray3: #161616;
+    --gray4: #75756B;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    user-select: none;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* General */
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: var(--gray1);
+    color: var(--white);
+}
+button {
+    font-family: 'Comfortaa', sans-serif;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    outline: none;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+}
+input {
+    font-family: 'Comfortaa', sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+}
+::selection {
+    background-color:  var(--dark);
+    color: var(--white);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}  
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: var(--main); 
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 768px;
+    padding: 1.4rem;
+}
+/* Header Title */
+header .container .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+header .container .title a {
+    color: var(--white);
+    font-weight: 500;
+    text-shadow: 2px 2px var(--main);
+    font-size: 1.85rem;
+}
+header .container .title i {
+    font-size: 2.85rem;
+    text-shadow: 2px 2px var(--main);
+}
+/* Header Icon Buttons */
+header .container .btnIcon {
+    font-size: 1.75rem;
+    border-radius: 5px;
+    width: 3rem;
+    height: 3rem;
+    text-shadow: 2px 2px var(--main);
+    border: 2px solid var(--gray4);
+    opacity: 80%;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 580px;
+    min-width: 275px;
+    border-radius: 5px;
+    background-color: var(--gray2);
+    box-shadow: 3px 3px 8px #000000;
+    padding: 2rem;
+}
+
+/* Character Box */
+main .container .character {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    min-width: 220px;
+}
+main .container .character .characterImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    background-color: var(--main);
+    text-shadow: 1px 1px 3px var(--gray3);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-size: cover;
+}
+main .container .character .characterName {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+main .container .character .tips {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+main .container .character .tips .tip {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--main);
+    text-shadow: 1px 1px 2px var(--gray3);
+}
+main .container .character .tips .tip:hover {
+    cursor: pointer;
+    background-color: var(--rev);
+    transition: all .15s;
+}
+main .container .character .tips .tip.revealed {
+    background-color: var(--rev);
+}
+main .container .character .tips .tip.revealed:hover {
+    cursor: default;
+}
+main .container .character .tips .tip.accessed {
+    background-color: var(--acc);
+}
+main .container .character .tips .tip.accessed:hover {
+    background-color: var(--acc);
+    cursor: default;
+}
+
+/*-------------------------------------------------*/
+
+/* Attempt Form */
+main .container .attemptForm {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   margin-top: 20px;
+   width: 85%;
+   min-width: 220px;
+}
+main .container .attemptForm .inputField {
+    display: flex;
+    width: 100%;
+}
+main .container .attemptForm .inputField input {
+    border-radius: 5px;
+    font-size: 1.8rem;
+    border: 2px solid var(--main);
+    color: var(--white);
+    padding: .8rem;
+    width: 100%;
+}
+main .container .attemptForm button {
+    border-radius: 5px;
+    font-size: 2rem;
+    background-color: var(--main);
+    text-shadow: 1px 1px 2px var(--gray3);
+    width: 60px;
+}
+main .container .attemptForm button:hover {
+    background-color: var(--rev);
+    transition: all .2s;
+}
+
+/* Floating Label */
+main .container .attemptForm .inputField input::placeholder {
+    user-select: none;
+    color: transparent;
+}
+main .container .attemptForm .inputField label {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    padding: 1.1rem 0 0 1.2rem;
+    font-size: 1.6rem;
+    color: var(--gray4);
+    transition: .06s;
+}
+main .container .attemptForm .inputField input:focus + label,
+main .container .attemptForm .inputField input:not(:placeholder-shown) + label {
+    transform: translate3d(-.2rem, -1.21rem, 0) scale(.8);
+    background-color: var(--gray2);
+    font-weight: 600;
+    color: var(--main);
+    padding: 0 .5rem;
+} 
+
+/* Score */
+main .container .score {
+    display: flex;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--main);
+    text-shadow: 2px 2px 2px var(--gray3);
+    margin-top: 18px;
+}
+
+/* Options Display */
+main .container .options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 60%;
+    margin-top: 20px;
+    width: 100%;
+}
+main .container .options button,
+main .container .options a {
+    gap: .3rem;
+    font-size: 1.4rem;
+    width: fit-content;
+    padding: .7rem;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--main);
+    border: 2px solid var(--main);
+    text-shadow: 2px 2px 2px var(--gray3);
+}
+main .container .options button i,
+main .container .options a i {
+    font-size: 1.8rem;
+}
+main .container .options a {
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .container .options button:hover,
+main .container .options a:hover {
+    background-color: var(--transl);
+    transition: all .2s;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: monospace;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-shadow: 2px 2px var(--main);
+    font-size: 2rem;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+footer .container .links {
+    display: flex;
+    margin-top: 8px;
+    font-size: 3.2rem;
+}
+footer .container .links a {
+    color: var(--white);
+    padding: 5px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Modals */
+
+@keyframes fall {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.modal.active,
+.modal.active .modalContainer.active {
+    display: flex;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 5000;
+}
+
+
+/* Container */
+.modal .modalContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    border-top: 6px solid var(--main);
+    background-color: var(--gray2);
+    box-shadow: 2px 2px 8px #000000;
+    width: 90%;
+    max-width: 380px;
+    min-width: 270px;
+    animation: fall .15s;
+    padding: 2.5rem;
+}
+
+/* Content */
+.modal .modalContainer .modalContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    text-shadow: 3px 3px 2px var(--gray3);
+    color: var(--main);
+}
+.modal .modalContainer .modalContent img {
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 70%;
+}
+.modal .modalContainer button {
+    font-size: 1.8rem;
+    padding: .5rem;
+    background-color: var(--main);
+    border-radius: 5px;
+    width: 25%;
+    margin-top: 20px;
+}
+
+/* Modal End Game */
+.modal.active .modalContainer.active.modalEndGame .modalContent img {
+    width: 90%;
+}
+/* Modal About */
+.modal.active .modalContainer.active.modalAbout {
+    max-width: 430px;
+}
+.modal.active .modalContainer.active.modalAbout .modalContent {
+    color: var(--gray4);
+    font-size: 1.8rem;
+}
+.modal.active .modalContainer.active.modalAbout .modalContent img {
+    width: 80%;
+    margin: 15px 0;
+}
+.modal.active .modalContainer.active.modalAbout .modalContent .ytLink {
+    color: var(--main);
+}
+/* Modal Stats */
+.modal.active .modalContainer.active.modalStats .modalContent {
+    color: var(--gray4);
+    font-size: 2rem;
+}
+.modal.active .modalContainer.active.modalStats .modalContent img {
+    width: 90%;
+}
+.modal.active .modalContainer.active.modalStats .modalContent .maxScore {
+    font-size: 2.8rem;
+    color: var(--main);
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* Responsive */
+
+@media (max-width: 375px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/*--------------------------------------------------------------------------*/
