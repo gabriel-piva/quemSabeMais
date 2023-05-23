@@ -20,7 +20,7 @@ No jogo, todos os personagens e todas as 5 dicas de cada um vem diretamente dos 
 </div>
 
 ### Execução
-Para executar o projeto bastar clonar o repositório com o link abaixo:
+Para executar o projeto basta clonar o repositório com o link abaixo:
 ```bash
 git clone https://github.com/gabriel-piva/quemSabeMais.git
 ```
