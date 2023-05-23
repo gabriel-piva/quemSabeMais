@@ -1,0 +1,11 @@
+# Ignore compiled JavaScript files and folder
+dist
+*.js
+
+# Ignore node_modules directory
+node_modules
+
+# Ignore editor-specific files and directories
+.vscode/
+.idea/
+*.sublime-*
